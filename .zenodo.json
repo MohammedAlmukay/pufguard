@@ -1,0 +1,29 @@
+{
+  "title": "PUFGuard: Explainable Answer Set Programming for Disclosure-Risk Screening of Public-Use Microdata",
+  "description": "Replication package for the PUFGuard manuscript: the profiling-to-policy pipeline (Python), the Answer Set Programming rule base and generated facts, configuration files, cross-tool (sdcMicro) and ARX-equivalent verification, exhaustive finite-domain verification, robustness/mutation tests, post-cleanup second-stage assessment, the automated test suite, and machine-readable result tables. The five source datasets are not redistributed; they are referenced by DOI and SHA-256 and downloaded per the README.",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "MIT",
+  "creators": [
+    {
+      "name": "Almukaynizi, Mohammed",
+      "orcid": "0000-0001-9553-0896",
+      "affiliation": "King Saud University"
+    }
+  ],
+  "keywords": [
+    "statistical disclosure control",
+    "k-anonymity",
+    "answer set programming",
+    "explainable decision support",
+    "public-use microdata",
+    "reproducible research"
+  ],
+  "related_identifiers": [
+    {"relation": "references", "identifier": "10.17632/wrwtvtppgd.1", "scheme": "doi"},
+    {"relation": "references", "identifier": "10.17632/y7rbxs53g9.1", "scheme": "doi"},
+    {"relation": "references", "identifier": "10.17632/2v8k7kk9vt.1", "scheme": "doi"},
+    {"relation": "references", "identifier": "10.17632/6z2hty8php.1", "scheme": "doi"},
+    {"relation": "references", "identifier": "10.5281/zenodo.21839927", "scheme": "doi"}
+  ]
+}

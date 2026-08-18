@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+title: "PUFGuard: Explainable Answer Set Programming for Disclosure-Risk Screening of Public-Use Microdata"
+message: "If you use this software, please cite it and each source dataset used in an analysis."
+type: software
+version: 0.2.0
+date-released: 2026-08-18
+authors:
+  - family-names: "Almukaynizi"
+    given-names: "Mohammed"
+    orcid: "https://orcid.org/0000-0001-9553-0896"
+    affiliation: "Information Systems Department, College of Computer and Information Sciences, King Saud University, Riyadh, Saudi Arabia"
+license: MIT
+keywords:
+  - privacy
+  - statistical disclosure control
+  - answer set programming
+  - public-use microdata
+  - explainable decision support
+  - reproducible research

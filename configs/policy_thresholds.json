@@ -1,0 +1,9 @@
+{
+  "singleton_high_basis_points": 1000,
+  "singleton_medium_basis_points": 100,
+  "records_below_k5_high_basis_points": 2500,
+  "homogeneous_sensitive_high_basis_points": 2500,
+  "target_k": 5,
+  "notes": "Research thresholds used for benchmarking, not statutory safe-harbor rules."
+}
+

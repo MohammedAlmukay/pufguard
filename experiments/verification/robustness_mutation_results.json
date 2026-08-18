@@ -1,0 +1,330 @@
+{
+  "defect_cases": {
+    "total": 14,
+    "asp_detected": 14,
+    "baseline_detected": 14,
+    "details": [
+      {
+        "name": "A1_missing_singleton",
+        "category": "A_incomplete",
+        "asp_sat": false,
+        "asp_decision": null,
+        "asp_matches_expected": true,
+        "description": "Missing singleton metric"
+      },
+      {
+        "name": "A2_missing_below_k5",
+        "category": "A_incomplete",
+        "asp_sat": false,
+        "asp_decision": null,
+        "asp_matches_expected": true,
+        "description": "Missing below-k5 metric"
+      },
+      {
+        "name": "A3_missing_homogeneous",
+        "category": "A_incomplete",
+        "asp_sat": false,
+        "asp_decision": null,
+        "asp_matches_expected": true,
+        "description": "Missing homogeneous metric"
+      },
+      {
+        "name": "A4_missing_thresh_singleton_high",
+        "category": "A_incomplete",
+        "asp_sat": false,
+        "asp_decision": null,
+        "asp_matches_expected": true,
+        "description": "Missing singleton_high threshold"
+      },
+      {
+        "name": "A5_missing_thresh_singleton_medium",
+        "category": "A_incomplete",
+        "asp_sat": false,
+        "asp_decision": null,
+        "asp_matches_expected": true,
+        "description": "Missing singleton_medium threshold"
+      },
+      {
+        "name": "A6_dataset_only",
+        "category": "A_incomplete",
+        "asp_sat": false,
+        "asp_decision": null,
+        "asp_matches_expected": true,
+        "description": "Dataset without any metrics"
+      },
+      {
+        "name": "B1_duplicate_singleton",
+        "category": "B_conflicting",
+        "asp_sat": false,
+        "asp_decision": null,
+        "asp_matches_expected": true,
+        "description": "Two distinct singleton values"
+      },
+      {
+        "name": "B2_duplicate_below_k5",
+        "category": "B_conflicting",
+        "asp_sat": false,
+        "asp_decision": null,
+        "asp_matches_expected": true,
+        "description": "Two distinct below-k5 values"
+      },
+      {
+        "name": "B3_duplicate_homogeneous",
+        "category": "B_conflicting",
+        "asp_sat": false,
+        "asp_decision": null,
+        "asp_matches_expected": true,
+        "description": "Two distinct homogeneous values"
+      },
+      {
+        "name": "B4_duplicate_threshold",
+        "category": "B_conflicting",
+        "asp_sat": false,
+        "asp_decision": null,
+        "asp_matches_expected": true,
+        "description": "Two distinct singleton_high thresholds"
+      },
+      {
+        "name": "B5_invalid_ordering",
+        "category": "B_conflicting",
+        "asp_sat": false,
+        "asp_decision": null,
+        "asp_matches_expected": true,
+        "description": "Threshold ordering violation: medium >= high"
+      },
+      {
+        "name": "B6_equal_ordering",
+        "category": "B_conflicting",
+        "asp_sat": false,
+        "asp_decision": null,
+        "asp_matches_expected": true,
+        "description": "Threshold ordering: medium == high"
+      },
+      {
+        "name": "C1_negative_singleton",
+        "category": "C_out_of_range",
+        "asp_sat": true,
+        "asp_decision": "public_candidate_after_documented_review",
+        "asp_matches_expected": true,
+        "description": "Negative singleton value (no range constraint in ASP)"
+      },
+      {
+        "name": "C2_over_10000_singleton",
+        "category": "C_out_of_range",
+        "asp_sat": true,
+        "asp_decision": "remediate_before_release",
+        "asp_matches_expected": true,
+        "description": "Singleton > 10000 (no range constraint in ASP)"
+      }
+    ],
+    "baseline_details": [
+      {
+        "name": "A1_missing_singleton",
+        "category": "A_incomplete",
+        "baseline_valid": false,
+        "baseline_decision": null,
+        "baseline_errors": [
+          "missing singleton_bp"
+        ],
+        "baseline_matches_expected": true
+      },
+      {
+        "name": "A2_missing_below_k5",
+        "category": "A_incomplete",
+        "baseline_valid": false,
+        "baseline_decision": null,
+        "baseline_errors": [
+          "missing below_k5_bp"
+        ],
+        "baseline_matches_expected": true
+      },
+      {
+        "name": "A3_missing_homogeneous",
+        "category": "A_incomplete",
+        "baseline_valid": false,
+        "baseline_decision": null,
+        "baseline_errors": [
+          "missing homogeneous_bp"
+        ],
+        "baseline_matches_expected": true
+      },
+      {
+        "name": "A4_missing_thresh_singleton_high",
+        "category": "A_incomplete",
+        "baseline_valid": false,
+        "baseline_decision": null,
+        "baseline_errors": [
+          "missing threshold: singleton_high"
+        ],
+        "baseline_matches_expected": true
+      },
+      {
+        "name": "A5_missing_thresh_singleton_medium",
+        "category": "A_incomplete",
+        "baseline_valid": false,
+        "baseline_decision": null,
+        "baseline_errors": [
+          "missing threshold: singleton_medium"
+        ],
+        "baseline_matches_expected": true
+      },
+      {
+        "name": "A6_dataset_only",
+        "category": "A_incomplete",
+        "baseline_result": "not_applicable",
+        "baseline_matches_expected": true
+      },
+      {
+        "name": "B1_duplicate_singleton",
+        "category": "B_conflicting",
+        "baseline_result": "not_applicable",
+        "baseline_matches_expected": true
+      },
+      {
+        "name": "B2_duplicate_below_k5",
+        "category": "B_conflicting",
+        "baseline_result": "not_applicable",
+        "baseline_matches_expected": true
+      },
+      {
+        "name": "B3_duplicate_homogeneous",
+        "category": "B_conflicting",
+        "baseline_result": "not_applicable",
+        "baseline_matches_expected": true
+      },
+      {
+        "name": "B4_duplicate_threshold",
+        "category": "B_conflicting",
+        "baseline_result": "not_applicable",
+        "baseline_matches_expected": true
+      },
+      {
+        "name": "B5_invalid_ordering",
+        "category": "B_conflicting",
+        "baseline_valid": false,
+        "baseline_decision": null,
+        "baseline_errors": [
+          "invalid threshold ordering: singleton_medium (200) >= singleton_high (100)"
+        ],
+        "baseline_matches_expected": true
+      },
+      {
+        "name": "B6_equal_ordering",
+        "category": "B_conflicting",
+        "baseline_valid": false,
+        "baseline_decision": null,
+        "baseline_errors": [
+          "invalid threshold ordering: singleton_medium (500) >= singleton_high (500)"
+        ],
+        "baseline_matches_expected": true
+      },
+      {
+        "name": "C1_negative_singleton",
+        "category": "C_out_of_range",
+        "baseline_result": "not_applicable",
+        "baseline_matches_expected": true
+      },
+      {
+        "name": "C2_over_10000_singleton",
+        "category": "C_out_of_range",
+        "baseline_result": "not_applicable",
+        "baseline_matches_expected": true
+      }
+    ]
+  },
+  "mutations": {
+    "total": 7,
+    "expected_detected": 7,
+    "details": [
+      {
+        "name": "M1_remove_si_restriction",
+        "description": "Remove structural-identifier restriction rule",
+        "failed_properties": [
+          "P6_structural_precedence"
+        ],
+        "expected_failures": [
+          "P6"
+        ],
+        "expected_detected": true
+      },
+      {
+        "name": "M2_remove_public_candidate",
+        "description": "Remove public-candidate rule (creates missing decisions)",
+        "failed_properties": [
+          "P1_totality"
+        ],
+        "expected_failures": [
+          "P1"
+        ],
+        "expected_detected": true
+      },
+      {
+        "name": "M3_add_conflicting_decision",
+        "description": "Add unconditional extra decision (breaks uniqueness constraint)",
+        "failed_properties": [
+          "P1_totality"
+        ],
+        "expected_failures": [
+          "P1"
+        ],
+        "expected_detected": true
+      },
+      {
+        "name": "M4_remove_completeness_gate",
+        "description": "Remove fail-closed profile gate (redundant with cardinality constraints)",
+        "failed_properties": [],
+        "expected_failures": [],
+        "expected_detected": true
+      },
+      {
+        "name": "M5_break_precedence",
+        "description": "Remove not-restricted guard from remediation (integrity constraint catches multi-decision)",
+        "failed_properties": [
+          "P1_totality"
+        ],
+        "expected_failures": [
+          "P1"
+        ],
+        "expected_detected": true
+      },
+      {
+        "name": "M6_remove_universal_action",
+        "description": "Remove universal documentation action",
+        "failed_properties": [
+          "P7_universal_action"
+        ],
+        "expected_failures": [
+          "P7"
+        ],
+        "expected_detected": true
+      },
+      {
+        "name": "M7_invert_monotonicity",
+        "description": "Low linkability triggers restriction (monotonicity violation)",
+        "failed_properties": [
+          "P8_monotonicity"
+        ],
+        "expected_failures": [
+          "P8"
+        ],
+        "expected_detected": true
+      }
+    ]
+  },
+  "baseline_properties": {
+    "label": "original",
+    "profiles_tested": 109,
+    "P1_totality": true,
+    "P2_uniqueness": true,
+    "P3_model_uniqueness": true,
+    "P4_valid_decisions": true,
+    "P5_malformed_rejection": true,
+    "P6_structural_precedence": true,
+    "P7_universal_action": true,
+    "P8_monotonicity": true,
+    "P8_violation_count": 0,
+    "unsat_count": 0,
+    "multi_decision_count": 0,
+    "multi_model_count": 0
+  }
+}

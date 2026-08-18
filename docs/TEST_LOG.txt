@@ -1,0 +1,20 @@
+PUFGuard test log
+====================
+
+Command:  python -m pytest -q tests
+
+Full run (with the five source datasets downloaded into data/raw/):
+    28 passed
+
+Clean-room run (deposit as published, before downloading the source datasets):
+    26 passed, 2 failed
+    The two failures are in tests/test_documentation.py:
+      - test_manifest_covers_raw_files_and_hashes
+      - test_verified_derived_fields_match_source_rows
+    Both require the raw workbooks in data/raw/, which are NOT redistributed in
+    this archive (see the Data acquisition step in README.md and the ethics
+    statement). After the five datasets are downloaded to the paths in
+    data/metadata/integrity_manifest.csv and their SHA-256 hashes verified, all
+    28 tests pass.
+
+Environment: see docs/ENVIRONMENT.md.

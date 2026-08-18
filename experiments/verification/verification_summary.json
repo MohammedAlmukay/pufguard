@@ -1,0 +1,46 @@
+{
+  "profiles_tested": 115,
+  "wellformed": 96,
+  "boundary": 13,
+  "malformed": 6,
+  "properties": {
+    "P1: Totality": {
+      "pass": true,
+      "failures": 0
+    },
+    "P2: Decision uniqueness": {
+      "pass": true,
+      "failures": 0
+    },
+    "P3: Stable-model uniqueness": {
+      "pass": true,
+      "failures": 0
+    },
+    "P4: Valid decision classes": {
+      "pass": true,
+      "failures": 0
+    },
+    "P5: Malformed-input rejection": {
+      "pass": true,
+      "failures": 0
+    },
+    "P6: Structural precedence": {
+      "pass": true,
+      "failures": 0
+    },
+    "P7: Trace completeness": {
+      "pass": true,
+      "failures": 0
+    },
+    "P8: Monotonicity": {
+      "pass": true,
+      "failures": 0
+    }
+  },
+  "decision_distribution": {
+    "public_candidate_after_documented_review": 6,
+    "restricted_review": 74,
+    "remediate_before_release": 16
+  },
+  "monotonicity_violations": []
+}

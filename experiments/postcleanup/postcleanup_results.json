@@ -1,0 +1,61 @@
+{
+  "cleanup_applied": {
+    "d2": [
+      "structural_identifier(d2).",
+      "free_text(d2)."
+    ],
+    "d3": [
+      "structural_identifier(d3)."
+    ],
+    "d4": [
+      "structural_identifier(d4)."
+    ]
+  },
+  "results": [
+    {
+      "dataset_id": "D1",
+      "raw_deposit_decision": "remediate_before_release",
+      "cleaned": "no (unchanged)",
+      "post_cleanup_decision": "remediate_before_release",
+      "decision_changed": "no",
+      "raw_flags": "high_linkability; high_small_group_exposure",
+      "post_cleanup_flags": "high_linkability; high_small_group_exposure"
+    },
+    {
+      "dataset_id": "D2",
+      "raw_deposit_decision": "restricted_review",
+      "cleaned": "yes",
+      "post_cleanup_decision": "remediate_before_release",
+      "decision_changed": "yes",
+      "raw_flags": "free_text_present; high_linkability; high_small_group_exposure; structural_identifier_present",
+      "post_cleanup_flags": "high_linkability; high_small_group_exposure"
+    },
+    {
+      "dataset_id": "D3",
+      "raw_deposit_decision": "restricted_review",
+      "cleaned": "yes",
+      "post_cleanup_decision": "remediate_before_release",
+      "decision_changed": "yes",
+      "raw_flags": "high_linkability; high_small_group_exposure; structural_identifier_present",
+      "post_cleanup_flags": "high_linkability; high_small_group_exposure"
+    },
+    {
+      "dataset_id": "D4",
+      "raw_deposit_decision": "restricted_review",
+      "cleaned": "yes",
+      "post_cleanup_decision": "remediate_before_release",
+      "decision_changed": "yes",
+      "raw_flags": "high_linkability; high_small_group_exposure; structural_identifier_present",
+      "post_cleanup_flags": "high_linkability; high_small_group_exposure"
+    },
+    {
+      "dataset_id": "D5",
+      "raw_deposit_decision": "public_candidate_after_documented_review",
+      "cleaned": "no (unchanged)",
+      "post_cleanup_decision": "public_candidate_after_documented_review",
+      "decision_changed": "no",
+      "raw_flags": "medium_linkability",
+      "post_cleanup_flags": "medium_linkability"
+    }
+  ]
+}

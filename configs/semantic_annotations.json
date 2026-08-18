@@ -1,0 +1,142 @@
+{
+  "schema_version": "1.0",
+  "documentation_date": "2026-08-10",
+  "status_vocabulary": {
+    "confirmed_repository_description": "Meaning is stated by the repository record or related publication.",
+    "confirmed_source_document": "Meaning or coding is stated in a source document distributed with the dataset.",
+    "confirmed_column_header": "The full survey item is present as the column header.",
+    "derived_and_empirically_verified": "The formula was verified against every row in the deposited file.",
+    "partially_verified_rounding_unresolved": "The construct is known, but deposited rounding does not reproduce exactly from visible components.",
+    "coding_not_deposited": "The construct is known but the code-to-label mapping is absent from the local deposit.",
+    "needs_author_confirmation": "The repository package does not support a more specific definition."
+  },
+  "datasets": {
+    "D1": {
+      "source_url": "https://data.mendeley.com/datasets/wrwtvtppgd/1",
+      "related_publication": "https://doi.org/10.1371/journal.pone.0293799",
+      "default_status": "confirmed_column_header",
+      "exact": {
+        "Age": {"description": "Participant age band.", "measurement_level": "ordinal categorical", "coding": "18-30; 31-40; 41-50; 51-60 years", "source": "repository description"},
+        "Gender": {"description": "Self-reported gender.", "measurement_level": "nominal categorical", "source": "column header and repository description"},
+        "Marital status": {"description": "Self-reported marital-status category.", "measurement_level": "nominal categorical", "source": "column header"},
+        "Nationality": {"description": "Participant nationality; constant Saudi in the deposited analytic file.", "measurement_level": "nominal categorical", "source": "column header and observed file"},
+        "Region": {"description": "Saudi administrative region grouped as western, southern, eastern, northern, or central.", "measurement_level": "nominal categorical", "source": "repository description"},
+        "Educational level": {"description": "Highest reported educational-level category.", "measurement_level": "ordinal categorical", "source": "repository description"},
+        "Occupation": {"description": "Reported employment or activity category.", "measurement_level": "nominal categorical", "source": "repository description"},
+        "Family income per month": {"description": "Monthly household income band in Saudi riyals.", "measurement_level": "ordinal categorical", "unit": "SAR/month", "source": "repository description"},
+        "Weight/kg": {"description": "Self-reported body weight.", "measurement_level": "continuous numeric", "unit": "kg", "source": "repository description"},
+        "Hight/cm": {"description": "Self-reported height; source column retains the misspelling 'Hight'.", "measurement_level": "continuous numeric", "unit": "cm", "source": "repository description"},
+        "BMI": {"description": "Body mass index computed as weight in kilograms divided by squared height in metres.", "measurement_level": "continuous numeric", "unit": "kg/m^2", "source": "repository description"},
+        "Do you smoke?": {"description": "Current or former smoking-status category.", "measurement_level": "nominal categorical", "source": "column header"},
+        "Do you have chronic diseases?": {"description": "Reported physician-diagnosed chronic-disease category or combination.", "measurement_level": "multi-response categorical", "source": "repository description"},
+        "Depression score": {"description": "Sum of the 21 Beck Depression Inventory-II item scores; higher values represent more severe symptoms.", "measurement_level": "integer score", "unit": "0-63 points", "coding": "sum(Q1..Q21)", "formula": "sum(Q 1..Q 21)", "source": "repository description and row-wise verification", "status": "derived_and_empirically_verified"}
+      },
+      "patterns": [
+        {"regex": "^Q\\s*(\\d+)$", "description_template": "Beck Depression Inventory-II response score for item {1}; item wording is not reproduced in the repository workbook.", "measurement_level": "ordinal item score", "unit": "0-3 points", "coding": "0=no symptom to 3=severe symptom", "source": "repository description", "status": "confirmed_repository_description"}
+      ]
+    },
+    "D2": {
+      "source_url": "https://data.mendeley.com/datasets/y7rbxs53g9/1",
+      "default_status": "confirmed_column_header",
+      "exact": {
+        "Timestamp": {"description": "Survey submission timestamp. Treated conservatively as a direct/operational identifier because it is record-unique.", "measurement_level": "datetime text", "source": "column header and observed file"},
+        "Researcher's number": {"description": "Operational researcher or collector code. Treated conservatively as an identifier-like field despite low cardinality.", "measurement_level": "nominal code", "source": "column header and observed file"},
+        "Age": {"description": "Participant age band.", "measurement_level": "ordinal categorical", "source": "column header and repository description"},
+        "Sex": {"description": "Self-reported sex category.", "measurement_level": "nominal categorical", "source": "column header and repository description"},
+        "Weight": {"description": "Self-reported body-weight band.", "measurement_level": "ordinal categorical", "unit": "kg", "source": "column header and repository description"},
+        "Height": {"description": "Self-reported height band.", "measurement_level": "ordinal categorical", "unit": "cm", "source": "column header and repository description"},
+        "Marital status": {"description": "Self-reported marital-status category.", "measurement_level": "nominal categorical", "source": "column header and repository description"},
+        "Job status": {"description": "Employment or activity-status category.", "measurement_level": "nominal categorical", "source": "column header and repository description"},
+        "monthly income": {"description": "Monthly income band in Saudi riyals.", "measurement_level": "ordinal categorical", "unit": "SAR/month", "source": "column header and repository description"},
+        "City": {"description": "Reported city category. Several English labels and spreadsheet-error tokens require depositor confirmation before substantive analysis.", "measurement_level": "nominal categorical", "source": "column header and observed file", "status": "needs_author_confirmation"},
+        "Any comments, suggestions, or weight loss experiences?": {"description": "Optional free-text comment on weight-loss experience. Values must never be quoted or redistributed by this project.", "measurement_level": "free text", "source": "column header"}
+      }
+    },
+    "D3": {
+      "source_url": "https://data.mendeley.com/datasets/2v8k7kk9vt/1",
+      "related_publication": "https://doi.org/10.31470/2309-1797-2021-29-1-30-58",
+      "default_status": "coding_not_deposited",
+      "exact": {
+        "ID": {"description": "Deposited participant record identifier.", "measurement_level": "identifier", "source": "column header", "status": "confirmed_column_header"},
+        "Age": {"description": "Participant age in years.", "measurement_level": "integer numeric", "unit": "years", "source": "repository description", "status": "confirmed_repository_description"},
+        "Gender": {"description": "Coded participant gender; code-to-label mapping is not present in the local workbook.", "measurement_level": "nominal code", "source": "repository description and observed file", "status": "coding_not_deposited"},
+        "Nationality": {"description": "Coded nationality category; code-to-label mapping is not present in the local workbook.", "measurement_level": "nominal code", "source": "repository description and observed file", "status": "coding_not_deposited"},
+        "Education_Level": {"description": "Coded latest educational qualification; code-to-label mapping is not present in the local workbook.", "measurement_level": "ordinal code", "source": "repository description and observed file", "status": "coding_not_deposited"},
+        "City": {"description": "Coded Saudi city of residence; code-to-label mapping is not present in the local workbook.", "measurement_level": "nominal code", "source": "repository description and observed file", "status": "coding_not_deposited"},
+        "P2_T": {"description": "Total depression-instrument score across P2_1 to P2_20 as deposited; the sum is verified, but the related publication describes BDI-II and the workbook contains only 20 visible P2 item columns, which requires author confirmation.", "measurement_level": "integer score", "unit": "points", "formula": "sum(P2_1..P2_20)", "source": "related publication and row-wise verification", "status": "needs_author_confirmation"},
+        "P3_T": {"description": "Total state-anxiety score across the 20 P3 items.", "measurement_level": "integer score", "unit": "points", "formula": "sum(P3_1..P3_20)", "source": "related publication and row-wise verification", "status": "derived_and_empirically_verified"},
+        "Age_Group": {"description": "Three-level derived age group (young, middle-aged, old); numeric code-to-label mapping is not deposited locally.", "measurement_level": "ordinal code", "source": "repository description and related publication", "status": "coding_not_deposited"},
+        "Gain_LS": {"description": "Mean affect rating for gain-framed, less-severe messages across desirable and undesirable outcomes.", "measurement_level": "derived continuous score", "unit": "1-6 rating", "formula": "mean(P4LS_GD, P4LS_GUD)", "source": "related publication and row-wise verification", "status": "derived_and_empirically_verified"},
+        "Loss_LS": {"description": "Mean affect rating for loss-framed, less-severe messages across desirable and undesirable outcomes.", "measurement_level": "derived continuous score", "unit": "1-6 rating", "formula": "mean(P4LS_LD, P4LS_LUD)", "source": "related publication and row-wise verification", "status": "derived_and_empirically_verified"},
+        "Gain_MS": {"description": "Mean affect rating for gain-framed, more-severe messages across desirable and undesirable outcomes.", "measurement_level": "derived continuous score", "unit": "1-6 rating", "formula": "mean(P4MS_GD, P4MS_GUD)", "source": "related publication and row-wise verification", "status": "derived_and_empirically_verified"},
+        "Loss_MS": {"description": "Mean affect rating for loss-framed, more-severe messages across desirable and undesirable outcomes.", "measurement_level": "derived continuous score", "unit": "1-6 rating", "formula": "mean(P4MS_LD, P4MS_LUD)", "source": "related publication and row-wise verification", "status": "derived_and_empirically_verified"},
+        "Gain": {"description": "Overall gain-frame affect score. Construct is confirmed, but the deposited rounding differs by up to 0.05 from the visible four-component mean.", "measurement_level": "derived continuous score", "unit": "1-6 rating", "formula": "mean(P4LS_GD, P4LS_GUD, P4MS_GD, P4MS_GUD), deposited rounding", "source": "related publication and row-wise verification", "status": "partially_verified_rounding_unresolved"},
+        "Loss": {"description": "Overall loss-frame affect score. Construct is confirmed, but the deposited rounding differs by up to 0.05 from the visible four-component mean.", "measurement_level": "derived continuous score", "unit": "1-6 rating", "formula": "mean(P4LS_LD, P4LS_LUD, P4MS_LD, P4MS_LUD), deposited rounding", "source": "related publication and row-wise verification", "status": "partially_verified_rounding_unresolved"},
+        "Gain_D": {"description": "Mean gain-frame affect rating for desirable outcomes across severity levels.", "measurement_level": "derived continuous score", "unit": "1-6 rating", "formula": "mean(P4LS_GD, P4MS_GD)", "source": "related publication and row-wise verification", "status": "derived_and_empirically_verified"},
+        "Gain_UD": {"description": "Mean gain-frame affect rating for undesirable outcomes across severity levels.", "measurement_level": "derived continuous score", "unit": "1-6 rating", "formula": "mean(P4LS_GUD, P4MS_GUD)", "source": "related publication and row-wise verification", "status": "derived_and_empirically_verified"},
+        "Loss_D": {"description": "Mean loss-frame affect rating for desirable outcomes across severity levels.", "measurement_level": "derived continuous score", "unit": "1-6 rating", "formula": "mean(P4LS_LD, P4MS_LD)", "source": "related publication and row-wise verification", "status": "derived_and_empirically_verified"},
+        "Loss_UD": {"description": "Mean loss-frame affect rating for undesirable outcomes across severity levels.", "measurement_level": "derived continuous score", "unit": "1-6 rating", "formula": "mean(P4LS_LUD, P4MS_LUD)", "source": "related publication and row-wise verification", "status": "derived_and_empirically_verified"}
+      },
+      "patterns": [
+        {"regex": "^P2_(\\d+)$", "description_template": "Deposited depression-instrument item score P2 item {1}; exact item-to-question mapping is not included in the local deposit.", "measurement_level": "ordinal item score", "unit": "0-3 points", "source": "related publication and observed file", "status": "coding_not_deposited"},
+        {"regex": "^P3_(\\d+)$", "description_template": "State Anxiety Inventory item {1} response score.", "measurement_level": "ordinal item score", "unit": "1-4 points", "source": "related publication", "status": "confirmed_repository_description"},
+        {"regex": "^P4(LS|MS)_(G|L)(D|UD)$", "description_template": "Mean affect rating for {2}-framed, {1}-severity messages with {3} outcomes (LS=less severe, MS=more severe, G=gain, L=loss, D=desirable, UD=undesirable).", "measurement_level": "derived continuous score", "unit": "1-6 rating", "source": "related publication", "status": "confirmed_repository_description"}
+      ]
+    },
+    "D4": {
+      "source_url": "https://data.mendeley.com/datasets/6z2hty8php/1",
+      "default_status": "confirmed_source_document",
+      "exact": {
+        "ID": {"description": "Deposited employee-response record identifier.", "measurement_level": "identifier", "source": "column header"},
+        "Attrition": {"description": "Whether the respondent had left a previous organization before the current job.", "measurement_level": "binary categorical", "coding": "Yes/No", "source": "Online_Survey_Questions.docx"},
+        "Gender": {"description": "Self-reported gender.", "measurement_level": "binary categorical", "coding": "Male/Female", "source": "Online_Survey_Questions.docx"},
+        "Age": {"description": "Participant age band.", "measurement_level": "ordinal categorical", "coding": "21-30; 31-40; 41-50; 51-60 years", "source": "Online_Survey_Questions.docx"},
+        "Maritalstatus": {"description": "Self-reported marital status.", "measurement_level": "nominal categorical", "coding": "Single; Married; Divorced", "source": "Online_Survey_Questions.docx"},
+        "Academic_degree": {"description": "Highest academic degree.", "measurement_level": "ordinal categorical", "coding": "Diploma/secondary; Bachelor's; Master's; Ph.D.", "source": "Online_Survey_Questions.docx and Dataset_Keys.docx"},
+        "Years_Experience": {"description": "Total years of work experience across all organizations.", "measurement_level": "ordinal categorical", "unit": "years", "source": "Online_Survey_Questions.docx"},
+        "Years_experience_lastorganization": {"description": "Years of experience in the last organization the respondent left.", "measurement_level": "ordinal categorical", "unit": "years", "source": "Online_Survey_Questions.docx"},
+        "Sector": {"description": "Sector of the last organization the respondent left.", "measurement_level": "nominal categorical", "source": "Online_Survey_Questions.docx"},
+        "Department": {"description": "Department in the last organization the respondent left.", "measurement_level": "nominal categorical", "source": "Online_Survey_Questions.docx"},
+        "JobTitle": {"description": "Job title held in the last organization the respondent left.", "measurement_level": "nominal categorical", "source": "Online_Survey_Questions.docx"},
+        "MonthlySalary": {"description": "Monthly salary band including allowances.", "measurement_level": "ordinal categorical", "unit": "SAR/month", "source": "Online_Survey_Questions.docx"},
+        "Allowances": {"description": "Deposited coded representation of allowance type(s); local key describes allowance categories but the single numeric code requires depositor confirmation.", "measurement_level": "nominal code", "source": "Online_Survey_Questions.docx and observed file", "status": "needs_author_confirmation"},
+        "MedicalInsurance": {"description": "Whether the last organization provided medical insurance.", "measurement_level": "binary categorical", "coding": "Yes/No", "source": "Online_Survey_Questions.docx"},
+        "Bonus": {"description": "Whether an annual performance-related bonus was received.", "measurement_level": "binary categorical", "coding": "Yes/No", "source": "Online_Survey_Questions.docx"},
+        "OverTime": {"description": "Whether overtime outside the standard schedule was worked.", "measurement_level": "binary categorical", "coding": "Yes/No", "source": "Online_Survey_Questions.docx"},
+        "Payment_Overtime": {"description": "Whether overtime was paid, including the not-applicable category for no overtime.", "measurement_level": "nominal categorical", "source": "Online_Survey_Questions.docx"},
+        "Rewards&Wages_Satisfaction": {"description": "Satisfaction with monthly income relative to effort, rewards, and wages.", "measurement_level": "binary categorical", "coding": "Yes/No", "source": "Online_Survey_Questions.docx"},
+        "Get_ Deserved_Promotion": {"description": "Whether the respondent believed deserved promotion was received.", "measurement_level": "binary categorical", "coding": "Yes/No", "source": "Online_Survey_Questions.docx"},
+        "Training_programs_ During_last_three_years": {"description": "Number band of training programs provided during the last three years.", "measurement_level": "ordinal categorical", "source": "Online_Survey_Questions.docx"},
+        "Useful_Training_Programs": {"description": "Whether the respondent benefited from the training provided.", "measurement_level": "binary categorical", "coding": "Yes/No", "source": "Online_Survey_Questions.docx"},
+        "Business_Travel": {"description": "Frequency of overnight or non-routine business travel.", "measurement_level": "ordinal categorical", "source": "Online_Survey_Questions.docx"},
+        "Job_Support": {"description": "Perceived organizational support for completing work.", "measurement_level": "ordinal categorical", "coding": "Low; Medium; High", "source": "Online_Survey_Questions.docx"},
+        "Recognition": {"description": "Whether supervisors provided moral appreciation and recognition.", "measurement_level": "binary categorical", "coding": "Yes/No", "source": "Online_Survey_Questions.docx"},
+        "Emotional_Commitment": {"description": "Rated emotional commitment and psychological relationship with the organization.", "measurement_level": "ordinal categorical", "coding": "Low; Medium; High", "source": "Online_Survey_Questions.docx"},
+        "Job_Engagement": {"description": "Ease of involvement in the job, including participation in decisions and opinions.", "measurement_level": "ordinal categorical", "coding": "Difficult; Medium; Easy", "source": "Online_Survey_Questions.docx"},
+        "Distance_to_work": {"description": "Perceived distance to the workplace.", "measurement_level": "ordinal categorical", "coding": "Close; Medium; Far", "source": "Online_Survey_Questions.docx"},
+        "Work_Live_Balance": {"description": "Ease of balancing work and personal life; source retains the variable spelling 'Live'.", "measurement_level": "ordinal categorical", "coding": "Difficult; Medium; Easy", "source": "Online_Survey_Questions.docx"},
+        "Physical_Stress": {"description": "Frequency of physical stress caused by physically demanding workplace tasks.", "measurement_level": "ordinal categorical", "coding": "No; Sometimes; Yes", "source": "Online_Survey_Questions.docx"},
+        "Psychological_Exhaustion": {"description": "Frequency of psychological exhaustion or mental/emotional fatigue from job stress.", "measurement_level": "ordinal categorical", "coding": "No; Sometimes; Yes", "source": "Online_Survey_Questions.docx"},
+        "Job_Stability": {"description": "Whether the respondent felt job security and stability.", "measurement_level": "binary categorical", "coding": "Yes/No", "source": "Online_Survey_Questions.docx"},
+        "Health_Issues": {"description": "Whether health problems contributed to leaving work.", "measurement_level": "binary categorical", "coding": "Yes/No", "source": "Online_Survey_Questions.docx"},
+        "Environment_Satisfaction": {"description": "Satisfaction with the work environment, including colleagues, facilities, lighting, air conditioning, and noise.", "measurement_level": "ordinal categorical", "coding": "Low; Medium; High", "source": "Online_Survey_Questions.docx"},
+        "Job_Satisfaction": {"description": "Overall job satisfaction in the last organization.", "measurement_level": "ordinal categorical", "coding": "Not satisfied; Satisfied; Very satisfied", "source": "Online_Survey_Questions.docx"},
+        "Job_Opportunities": {"description": "Whether alternative job opportunities were available while working in the last organization.", "measurement_level": "binary categorical", "coding": "Yes/No", "source": "Online_Survey_Questions.docx"}
+      }
+    },
+    "D5": {
+      "source_url": "https://zenodo.org/records/21839927",
+      "related_publication": "",
+      "default_status": "confirmed_column_header",
+      "exact": {
+        "marital status": {"description": "Self-reported marital status.", "measurement_level": "nominal categorical", "coding": "Married; Single; Divorced; Widowed; Other", "source": "variable codebook"},
+        "Age": {"description": "Age band of the respondent.", "measurement_level": "ordinal categorical", "coding": "1 = 18-29; 2 = 30-39; 3 = 40-49; 4 = 50+", "source": "variable codebook"},
+        "Household size": {"description": "Number of household members.", "measurement_level": "ordinal categorical", "coding": "1-4 people; 5-8 people; More than 9 people", "source": "variable codebook"},
+        "Income": {"description": "Monthly household income band in Saudi riyals.", "measurement_level": "ordinal categorical", "unit": "SAR/month", "source": "variable codebook"},
+        "Employment sector": {"description": "Employment sector(s) of the respondent; multi-select field.", "measurement_level": "nominal categorical", "source": "variable codebook"},
+        "SectorWorkplace transition likelihood": {"description": "Self-reported likelihood of transitioning to a different employment sector after the driving reform.", "measurement_level": "ordinal categorical", "coding": "0 = unlikely; 1 = somewhat likely; 2 = likely; No = not applicable", "source": "variable codebook"},
+        "Driving Licence": {"description": "Whether the respondent obtained a driving licence after the reform.", "measurement_level": "nominal categorical", "coding": "Agree; Disagree; Don't know", "source": "variable codebook"}
+      }
+    }
+  }
+}

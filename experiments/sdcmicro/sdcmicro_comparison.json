@@ -1,0 +1,21 @@
+{
+  "comparisons": [
+    {
+      "metric": "Singleton rate (core)",
+      "pufguard": "0.1151 (11.5%)",
+      "sdcmicro": "0.1151 (11.5%)",
+      "abs_diff": "0.000000",
+      "match": "True"
+    },
+    {
+      "metric": "Below-k=5 rate (core)",
+      "pufguard": "0.2832 (28.3%)",
+      "sdcmicro": "0.2832 (28.3%)",
+      "abs_diff": "0.000000",
+      "match": "True"
+    }
+  ],
+  "pufguard_version": "PUFGuard pipeline",
+  "sdcmicro_version": "5.8.2",
+  "r_version": "R version 4.6.1 (2026-06-24 ucrt)"
+}

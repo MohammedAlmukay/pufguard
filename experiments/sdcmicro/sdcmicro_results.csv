@@ -1,0 +1,3 @@
+"dataset","records","key_variables","key_var_names","global_risk","global_risk_pct","records_risk_above_50pct","records_risk_100pct","sdcmicro_version","r_version","singleton_rate","below_k5_rate","min_k","median_k"
+"D1_BMI_Depression_core",4683,7,"Age;Gender;Marital status;Region;Educational level;Occupation;Family income per month",0.222506939995729,22.2506939995729,539,539,"5.8.2","R version 4.6.1 (2026-06-24 ucrt)",0.115097159940209,0.283151825752723,1,1
+"sdcMicro_testdata",4580,7,"urbrur;roof;walls;water;electcon;relat;sex",0.00235334037526961,0.235334037526961,0,0,"5.8.2","R version 4.6.1 (2026-06-24 ucrt)",NA,NA,NA,NA

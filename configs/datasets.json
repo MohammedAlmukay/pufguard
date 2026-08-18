@@ -1,0 +1,93 @@
+{
+  "D1": {
+    "name": "BMI_Depression",
+    "file": "data/raw/D1_BMI_Depression/Data.xlsx",
+    "sheet": 0,
+    "domain": "health",
+    "structural_identifiers": [],
+    "free_text": [],
+    "sensitive": ["BMI", "Do you smoke?", "Do you have chronic diseases?", "Depression score"],
+    "primary_sensitive": "Depression score",
+    "core_qids": ["Age", "Gender", "Marital status", "Region", "Educational level", "Occupation", "Family income per month"],
+    "extended_qids": ["Age", "Gender", "Marital status", "Region", "Educational level", "Occupation", "Family income per month", "Weight/kg", "Hight/cm", "Do you smoke?"],
+    "pattern_prefixes": ["Q "],
+    "scenarios": {
+      "extended": ["Age", "Gender", "Marital status", "Region", "Educational level", "Occupation", "Family income per month", "Weight/kg", "Hight/cm", "Do you smoke?"],
+      "core": ["Age", "Gender", "Marital status", "Region", "Educational level", "Occupation", "Family income per month"],
+      "coarse": ["Age", "Gender", "Marital status", "Region", "Educational level"]
+    }
+  },
+  "D2": {
+    "name": "GLP1",
+    "file": "data/raw/D2_GLP1/Raw_data_GLPI_weight_mgmt.xlsx",
+    "sheet": 0,
+    "domain": "health",
+    "structural_identifiers": ["Timestamp", "Researcher's number"],
+    "free_text": ["Any comments, suggestions, or weight loss experiences?"],
+    "sensitive": ["Do you suffer from any chronic illness?", "Have you used any weight loss medications in the past twelve months?", "Have you experienced any side effects when using these medications?"],
+    "primary_sensitive": "Do you suffer from any chronic illness?",
+    "core_qids": ["Age", "Sex", "Marital status", "Educational status", "Job status", "City"],
+    "extended_qids": ["Age", "Sex", "Weight", "Height", "Marital status", "Educational status", "Job status", "Do you have health insurance?", "monthly income", "City"],
+    "pattern_prefixes": ["These medications"],
+    "scenarios": {
+      "extended": ["Age", "Sex", "Weight", "Height", "Marital status", "Educational status", "Job status", "Do you have health insurance?", "monthly income", "City"],
+      "core": ["Age", "Sex", "Marital status", "Educational status", "Job status", "City"],
+      "coarse": ["Age", "Sex", "Educational status"]
+    }
+  },
+  "D3": {
+    "name": "Health_Message",
+    "file": "data/raw/D3_Health_Message/Dataset.xlsx",
+    "sheet": 0,
+    "domain": "health",
+    "structural_identifiers": ["ID"],
+    "free_text": [],
+    "sensitive": ["P2_T", "P3_T"],
+    "primary_sensitive": "P2_T",
+    "core_qids": ["Age_Group", "Gender", "Nationality", "Education_Level", "City"],
+    "extended_qids": ["Age", "Gender", "Nationality", "Education_Level", "City"],
+    "pattern_prefixes": ["P2_", "P3_"],
+    "scenarios": {
+      "extended": ["Age", "Gender", "Nationality", "Education_Level", "City"],
+      "core": ["Age_Group", "Gender", "Nationality", "Education_Level", "City"],
+      "coarse": ["Age_Group", "Gender", "Education_Level"]
+    }
+  },
+  "D4": {
+    "name": "Employee_Attrition",
+    "file": "data/raw/D4_Employee_Attrition/Original_Dataset_of_Employee_Attrition.xlsx",
+    "sheet": 0,
+    "domain": "employment",
+    "structural_identifiers": ["ID"],
+    "free_text": [],
+    "sensitive": ["Attrition", "Health_Issues", "Psychological_Exhaustion", "Job_Satisfaction"],
+    "primary_sensitive": "Attrition",
+    "core_qids": ["Gender", "Age", "Maritalstatus", "Academic_degree", "Sector", "Department"],
+    "extended_qids": ["Gender", "Age", "Maritalstatus", "Academic_degree", "Years_Experience", "Sector", "Department", "JobTitle", "MonthlySalary", "Distance_to_work"],
+    "pattern_prefixes": ["Job_", "Psychological_", "Health_"],
+    "scenarios": {
+      "extended": ["Gender", "Age", "Maritalstatus", "Academic_degree", "Years_Experience", "Sector", "Department", "JobTitle", "MonthlySalary", "Distance_to_work"],
+      "core": ["Gender", "Age", "Maritalstatus", "Academic_degree", "Sector", "Department"],
+      "coarse": ["Gender", "Age", "Academic_degree", "Sector"]
+    }
+  },
+  "D5": {
+    "name": "Driving_Employment",
+    "file": "data/raw/D5_Driving_Employment/Employment_Transition_Dataset.xlsx",
+    "sheet": 0,
+    "domain": "employment",
+    "structural_identifiers": [],
+    "free_text": [],
+    "sensitive": ["SectorWorkplace transition likelihood", "Driving Licence"],
+    "primary_sensitive": "SectorWorkplace transition likelihood",
+    "core_qids": ["marital status", "Age"],
+    "extended_qids": ["marital status", "Age", "Income"],
+    "pattern_prefixes": ["reducing", "icreasing", "faciliatating", "increasing", "attaining", "improving", "promoting", "speeding", "complete", "many", "women", "more", "empowering", "achiveing", "equaleness", "Very"],
+    "scenarios": {
+      "extended": ["marital status", "Age", "Income"],
+      "core": ["marital status", "Age"],
+      "coarse": ["Age"]
+    }
+  }
+}
+

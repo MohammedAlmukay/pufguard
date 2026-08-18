@@ -1,0 +1,51 @@
+{
+  "wellformed_profiles": 109,
+  "decision_agreement": 109,
+  "decision_agreement_pct": 100.0,
+  "flag_mismatches": 0,
+  "action_mismatches": 0,
+  "malformed_profiles": 6,
+  "malformed_rejection_agreement": 5,
+  "disagreements": [],
+  "malformed_disagreements": [
+    {
+      "name": "duplicate_singleton",
+      "asp_rejects": true,
+      "baseline_rejects": false
+    }
+  ],
+  "policy_changes": [
+    {
+      "change": "1_add_item_pattern_trigger",
+      "profile": "change_test_base",
+      "asp_rules_added": 2,
+      "asp_decision_before": "public_candidate_after_documented_review",
+      "asp_decision_after": "restricted_review",
+      "baseline_lines_changed": "3 (add condition in restricted block + flag + action)"
+    },
+    {
+      "change": "1_add_item_pattern_trigger",
+      "profile": "change_test_si",
+      "asp_rules_added": 2,
+      "asp_decision_before": "restricted_review",
+      "asp_decision_after": "restricted_review",
+      "baseline_lines_changed": "3 (add condition in restricted block + flag + action)"
+    },
+    {
+      "change": "1_add_item_pattern_trigger",
+      "profile": "change_test_high_attr",
+      "asp_rules_added": 2,
+      "asp_decision_before": "remediate_before_release",
+      "asp_decision_after": "restricted_review",
+      "baseline_lines_changed": "3 (add condition in restricted block + flag + action)"
+    },
+    {
+      "change": "3_attr_disclosure_alone_restricts",
+      "profile": "change_test_high_attr",
+      "asp_rules_modified": 1,
+      "asp_decision_before": "remediate_before_release",
+      "asp_decision_after": "restricted_review",
+      "baseline_lines_changed": "2 (add condition in restricted block)"
+    }
+  ]
+}

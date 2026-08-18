@@ -1,0 +1,110 @@
+profile,asp_decision,baseline_decision,decision_agree,flags_agree,actions_agree,baseline_reasons
+s=low_b=low_h=low_sens=False_si=False_ft=False,public_candidate_after_documented_review,public_candidate_after_documented_review,True,True,True,no restriction or remediation triggered; public candidate by default
+s=low_b=low_h=low_sens=False_si=False_ft=True,restricted_review,restricted_review,True,True,True,free_text triggers restricted_review
+s=low_b=low_h=low_sens=False_si=True_ft=False,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review
+s=low_b=low_h=low_sens=False_si=True_ft=True,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review; free_text triggers restricted_review
+s=low_b=low_h=low_sens=True_si=False_ft=False,public_candidate_after_documented_review,public_candidate_after_documented_review,True,True,True,no restriction or remediation triggered; public candidate by default
+s=low_b=low_h=low_sens=True_si=False_ft=True,restricted_review,restricted_review,True,True,True,free_text triggers restricted_review
+s=low_b=low_h=low_sens=True_si=True_ft=False,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review
+s=low_b=low_h=low_sens=True_si=True_ft=True,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review; free_text triggers restricted_review
+s=low_b=low_h=high_sens=False_si=False_ft=False,public_candidate_after_documented_review,public_candidate_after_documented_review,True,True,True,no restriction or remediation triggered; public candidate by default
+s=low_b=low_h=high_sens=False_si=False_ft=True,restricted_review,restricted_review,True,True,True,free_text triggers restricted_review
+s=low_b=low_h=high_sens=False_si=True_ft=False,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review
+s=low_b=low_h=high_sens=False_si=True_ft=True,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review; free_text triggers restricted_review
+s=low_b=low_h=high_sens=True_si=False_ft=False,remediate_before_release,remediate_before_release,True,True,True,high_attribute_disclosure triggers remediation
+s=low_b=low_h=high_sens=True_si=False_ft=True,restricted_review,restricted_review,True,True,True,free_text triggers restricted_review
+s=low_b=low_h=high_sens=True_si=True_ft=False,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review
+s=low_b=low_h=high_sens=True_si=True_ft=True,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review; free_text triggers restricted_review
+s=low_b=high_h=low_sens=False_si=False_ft=False,remediate_before_release,remediate_before_release,True,True,True,high_small_group_exposure triggers remediation
+s=low_b=high_h=low_sens=False_si=False_ft=True,restricted_review,restricted_review,True,True,True,free_text triggers restricted_review
+s=low_b=high_h=low_sens=False_si=True_ft=False,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review
+s=low_b=high_h=low_sens=False_si=True_ft=True,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review; free_text triggers restricted_review
+s=low_b=high_h=low_sens=True_si=False_ft=False,remediate_before_release,remediate_before_release,True,True,True,high_small_group_exposure triggers remediation
+s=low_b=high_h=low_sens=True_si=False_ft=True,restricted_review,restricted_review,True,True,True,free_text triggers restricted_review
+s=low_b=high_h=low_sens=True_si=True_ft=False,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review
+s=low_b=high_h=low_sens=True_si=True_ft=True,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review; free_text triggers restricted_review
+s=low_b=high_h=high_sens=False_si=False_ft=False,remediate_before_release,remediate_before_release,True,True,True,high_small_group_exposure triggers remediation
+s=low_b=high_h=high_sens=False_si=False_ft=True,restricted_review,restricted_review,True,True,True,free_text triggers restricted_review
+s=low_b=high_h=high_sens=False_si=True_ft=False,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review
+s=low_b=high_h=high_sens=False_si=True_ft=True,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review; free_text triggers restricted_review
+s=low_b=high_h=high_sens=True_si=False_ft=False,remediate_before_release,remediate_before_release,True,True,True,high_small_group_exposure triggers remediation; high_attribute_disclosure triggers remediation
+s=low_b=high_h=high_sens=True_si=False_ft=True,restricted_review,restricted_review,True,True,True,free_text triggers restricted_review
+s=low_b=high_h=high_sens=True_si=True_ft=False,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review
+s=low_b=high_h=high_sens=True_si=True_ft=True,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review; free_text triggers restricted_review
+s=medium_b=low_h=low_sens=False_si=False_ft=False,public_candidate_after_documented_review,public_candidate_after_documented_review,True,True,True,no restriction or remediation triggered; public candidate by default
+s=medium_b=low_h=low_sens=False_si=False_ft=True,restricted_review,restricted_review,True,True,True,free_text triggers restricted_review
+s=medium_b=low_h=low_sens=False_si=True_ft=False,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review
+s=medium_b=low_h=low_sens=False_si=True_ft=True,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review; free_text triggers restricted_review
+s=medium_b=low_h=low_sens=True_si=False_ft=False,public_candidate_after_documented_review,public_candidate_after_documented_review,True,True,True,no restriction or remediation triggered; public candidate by default
+s=medium_b=low_h=low_sens=True_si=False_ft=True,restricted_review,restricted_review,True,True,True,free_text triggers restricted_review
+s=medium_b=low_h=low_sens=True_si=True_ft=False,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review
+s=medium_b=low_h=low_sens=True_si=True_ft=True,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review; free_text triggers restricted_review
+s=medium_b=low_h=high_sens=False_si=False_ft=False,public_candidate_after_documented_review,public_candidate_after_documented_review,True,True,True,no restriction or remediation triggered; public candidate by default
+s=medium_b=low_h=high_sens=False_si=False_ft=True,restricted_review,restricted_review,True,True,True,free_text triggers restricted_review
+s=medium_b=low_h=high_sens=False_si=True_ft=False,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review
+s=medium_b=low_h=high_sens=False_si=True_ft=True,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review; free_text triggers restricted_review
+s=medium_b=low_h=high_sens=True_si=False_ft=False,remediate_before_release,remediate_before_release,True,True,True,high_attribute_disclosure triggers remediation
+s=medium_b=low_h=high_sens=True_si=False_ft=True,restricted_review,restricted_review,True,True,True,free_text triggers restricted_review
+s=medium_b=low_h=high_sens=True_si=True_ft=False,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review
+s=medium_b=low_h=high_sens=True_si=True_ft=True,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review; free_text triggers restricted_review
+s=medium_b=high_h=low_sens=False_si=False_ft=False,remediate_before_release,remediate_before_release,True,True,True,high_small_group_exposure triggers remediation
+s=medium_b=high_h=low_sens=False_si=False_ft=True,restricted_review,restricted_review,True,True,True,free_text triggers restricted_review
+s=medium_b=high_h=low_sens=False_si=True_ft=False,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review
+s=medium_b=high_h=low_sens=False_si=True_ft=True,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review; free_text triggers restricted_review
+s=medium_b=high_h=low_sens=True_si=False_ft=False,remediate_before_release,remediate_before_release,True,True,True,high_small_group_exposure triggers remediation
+s=medium_b=high_h=low_sens=True_si=False_ft=True,restricted_review,restricted_review,True,True,True,free_text triggers restricted_review
+s=medium_b=high_h=low_sens=True_si=True_ft=False,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review
+s=medium_b=high_h=low_sens=True_si=True_ft=True,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review; free_text triggers restricted_review
+s=medium_b=high_h=high_sens=False_si=False_ft=False,remediate_before_release,remediate_before_release,True,True,True,high_small_group_exposure triggers remediation
+s=medium_b=high_h=high_sens=False_si=False_ft=True,restricted_review,restricted_review,True,True,True,free_text triggers restricted_review
+s=medium_b=high_h=high_sens=False_si=True_ft=False,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review
+s=medium_b=high_h=high_sens=False_si=True_ft=True,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review; free_text triggers restricted_review
+s=medium_b=high_h=high_sens=True_si=False_ft=False,remediate_before_release,remediate_before_release,True,True,True,high_small_group_exposure triggers remediation; high_attribute_disclosure triggers remediation
+s=medium_b=high_h=high_sens=True_si=False_ft=True,restricted_review,restricted_review,True,True,True,free_text triggers restricted_review
+s=medium_b=high_h=high_sens=True_si=True_ft=False,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review
+s=medium_b=high_h=high_sens=True_si=True_ft=True,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review; free_text triggers restricted_review
+s=high_b=low_h=low_sens=False_si=False_ft=False,remediate_before_release,remediate_before_release,True,True,True,high_linkability triggers remediation
+s=high_b=low_h=low_sens=False_si=False_ft=True,restricted_review,restricted_review,True,True,True,free_text triggers restricted_review
+s=high_b=low_h=low_sens=False_si=True_ft=False,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review
+s=high_b=low_h=low_sens=False_si=True_ft=True,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review; free_text triggers restricted_review
+s=high_b=low_h=low_sens=True_si=False_ft=False,remediate_before_release,remediate_before_release,True,True,True,high_linkability triggers remediation
+s=high_b=low_h=low_sens=True_si=False_ft=True,restricted_review,restricted_review,True,True,True,free_text triggers restricted_review
+s=high_b=low_h=low_sens=True_si=True_ft=False,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review
+s=high_b=low_h=low_sens=True_si=True_ft=True,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review; free_text triggers restricted_review
+s=high_b=low_h=high_sens=False_si=False_ft=False,remediate_before_release,remediate_before_release,True,True,True,high_linkability triggers remediation
+s=high_b=low_h=high_sens=False_si=False_ft=True,restricted_review,restricted_review,True,True,True,free_text triggers restricted_review
+s=high_b=low_h=high_sens=False_si=True_ft=False,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review
+s=high_b=low_h=high_sens=False_si=True_ft=True,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review; free_text triggers restricted_review
+s=high_b=low_h=high_sens=True_si=False_ft=False,restricted_review,restricted_review,True,True,True,sensitive + high_linkability + high_attribute_disclosure triggers restricted_review
+s=high_b=low_h=high_sens=True_si=False_ft=True,restricted_review,restricted_review,True,True,True,free_text triggers restricted_review; sensitive + high_linkability + high_attribute_disclosure triggers restricted_review
+s=high_b=low_h=high_sens=True_si=True_ft=False,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review; sensitive + high_linkability + high_attribute_disclosure triggers restricted_review
+s=high_b=low_h=high_sens=True_si=True_ft=True,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review; free_text triggers restricted_review; sensitive + high_linkability + high_attribute_disclosure triggers restricted_review
+s=high_b=high_h=low_sens=False_si=False_ft=False,remediate_before_release,remediate_before_release,True,True,True,high_linkability triggers remediation; high_small_group_exposure triggers remediation
+s=high_b=high_h=low_sens=False_si=False_ft=True,restricted_review,restricted_review,True,True,True,free_text triggers restricted_review
+s=high_b=high_h=low_sens=False_si=True_ft=False,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review
+s=high_b=high_h=low_sens=False_si=True_ft=True,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review; free_text triggers restricted_review
+s=high_b=high_h=low_sens=True_si=False_ft=False,remediate_before_release,remediate_before_release,True,True,True,high_linkability triggers remediation; high_small_group_exposure triggers remediation
+s=high_b=high_h=low_sens=True_si=False_ft=True,restricted_review,restricted_review,True,True,True,free_text triggers restricted_review
+s=high_b=high_h=low_sens=True_si=True_ft=False,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review
+s=high_b=high_h=low_sens=True_si=True_ft=True,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review; free_text triggers restricted_review
+s=high_b=high_h=high_sens=False_si=False_ft=False,remediate_before_release,remediate_before_release,True,True,True,high_linkability triggers remediation; high_small_group_exposure triggers remediation
+s=high_b=high_h=high_sens=False_si=False_ft=True,restricted_review,restricted_review,True,True,True,free_text triggers restricted_review
+s=high_b=high_h=high_sens=False_si=True_ft=False,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review
+s=high_b=high_h=high_sens=False_si=True_ft=True,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review; free_text triggers restricted_review
+s=high_b=high_h=high_sens=True_si=False_ft=False,restricted_review,restricted_review,True,True,True,sensitive + high_linkability + high_attribute_disclosure triggers restricted_review
+s=high_b=high_h=high_sens=True_si=False_ft=True,restricted_review,restricted_review,True,True,True,free_text triggers restricted_review; sensitive + high_linkability + high_attribute_disclosure triggers restricted_review
+s=high_b=high_h=high_sens=True_si=True_ft=False,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review; sensitive + high_linkability + high_attribute_disclosure triggers restricted_review
+s=high_b=high_h=high_sens=True_si=True_ft=True,restricted_review,restricted_review,True,True,True,structural_identifier triggers restricted_review; free_text triggers restricted_review; sensitive + high_linkability + high_attribute_disclosure triggers restricted_review
+singleton_just_below_medium,public_candidate_after_documented_review,public_candidate_after_documented_review,True,True,True,no restriction or remediation triggered; public candidate by default
+singleton_at_medium,public_candidate_after_documented_review,public_candidate_after_documented_review,True,True,True,no restriction or remediation triggered; public candidate by default
+singleton_just_above_medium,public_candidate_after_documented_review,public_candidate_after_documented_review,True,True,True,no restriction or remediation triggered; public candidate by default
+singleton_just_below_high,public_candidate_after_documented_review,public_candidate_after_documented_review,True,True,True,no restriction or remediation triggered; public candidate by default
+singleton_at_high,remediate_before_release,remediate_before_release,True,True,True,high_linkability triggers remediation
+singleton_just_above_high,remediate_before_release,remediate_before_release,True,True,True,high_linkability triggers remediation
+below_k5_just_below_high,public_candidate_after_documented_review,public_candidate_after_documented_review,True,True,True,no restriction or remediation triggered; public candidate by default
+below_k5_at_high,remediate_before_release,remediate_before_release,True,True,True,high_small_group_exposure triggers remediation
+below_k5_just_above_high,remediate_before_release,remediate_before_release,True,True,True,high_small_group_exposure triggers remediation
+homogeneous_just_below_high,public_candidate_after_documented_review,public_candidate_after_documented_review,True,True,True,no restriction or remediation triggered; public candidate by default
+homogeneous_at_high,remediate_before_release,remediate_before_release,True,True,True,high_attribute_disclosure triggers remediation
+homogeneous_just_above_high,remediate_before_release,remediate_before_release,True,True,True,high_attribute_disclosure triggers remediation
+homogeneous_high_no_sensitive,public_candidate_after_documented_review,public_candidate_after_documented_review,True,True,True,no restriction or remediation triggered; public candidate by default

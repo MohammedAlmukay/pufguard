@@ -1,0 +1,5 @@
+# Keep line endings deterministic across platforms so text-file hashes in
+# results/output_checksums.csv remain stable on any clone.
+* text=auto eol=lf
+*.png binary
+*.svg text eol=lf
