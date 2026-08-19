@@ -36,12 +36,12 @@
 % ---------- processing components (solid, colored) ----------
 \node[procbox, below=10mm of src] (prof) {\textbf{Profiler}\\[2pt] verify hashes, normalize,\\ drop all-empty rows,\\ build equivalence classes,\\ compute $U_Q$, $G_{k,Q}$, $H_Q$};
 \node[procbox, below=10mm of cfg] (eng) {\textbf{Policy Engine}\\[2pt] basis-point ASP facts,\\ Clingo grounding and solving,\\ integrity constraints,\\ exactly one stable model};
-\node[procbox, below=10mm of rules] (rep) {\textbf{Report Generator}\\[2pt] merge profiles with\\ decisions, render audit\\ report and manuscript\\ artifacts};
+\node[procbox, below=10mm of rules] (rep) {\textbf{Report Generator}\\[2pt] merge profiles with\\ decisions, render the\\ narrative audit report};
 
 % ---------- generated outputs (gray) ----------
-\node[outbox, below=10mm of prof] (o1) {dataset profiles (CSV/JSON),\\ column inventory};
+\node[outbox, below=10mm of prof] (o1) {dataset profiles (CSV/JSON),\\ column inventory, scenarios,\\ \LaTeX{} macros};
 \node[outbox, below=10mm of eng] (o2) {decision, flags, actions\\ with rule trace};
-\node[outbox, below=10mm of rep] (o3) {audit report, result tables,\\ \LaTeX{} macros};
+\node[outbox, below=10mm of rep] (o3) {Markdown audit report};
 
 % ---------- fail-closed ----------
 \node[haltbox, below=9mm of o2] (halt) {\textcolor{pufhalt}{\textbf{HALT: fail-closed}}\\ hash mismatch, missing QID,\\ malformed facts, UNSAT};
