@@ -1,4 +1,8 @@
 % PUFGuard architecture diagram (Figure 1).
+% Every label is verified against the code:
+%   Profiler        = src/pufguard/analyze_corpus.py
+%   Policy Engine   = src/pufguard/run_logic.py
+%   Report Generator= src/pufguard/build_report.py
 % Standalone: compile with  pdflatex architecture.tex  -> architecture.pdf
 \documentclass[border=6pt]{standalone}
 \usepackage{tikz}
@@ -15,32 +19,32 @@
 \begin{tikzpicture}[
   font=\sffamily\scriptsize,
   cfgbox/.style = {draw, dashed, rounded corners=2pt, align=center,
-                   text width=33mm, minimum height=12mm, inner sep=2pt},
+                   text width=33mm, minimum height=11mm, inner sep=2pt},
   procbox/.style = {draw=pufteal, very thick, fill=puflight, rounded corners=2pt,
-                    align=center, text width=37mm, minimum height=18mm, inner sep=3pt},
+                    align=center, text width=37mm, minimum height=16mm, inner sep=3pt},
   outbox/.style = {draw=pufgray, fill=pufgraybg, rounded corners=2pt, align=center,
                    text width=37mm, minimum height=12mm, inner sep=2pt},
   haltbox/.style = {draw=pufhalt, very thick, rounded corners=2pt, align=center,
                     text width=42mm, minimum height=11mm, inner sep=2pt},
   humanbox/.style = {draw, very thick, rounded corners=2pt, align=center,
-                     text width=37mm, minimum height=13mm, inner sep=2pt},
+                     text width=37mm, minimum height=12mm, inner sep=2pt},
   flow/.style = {-{Stealth[length=2mm]}, thick},
   fail/.style = {-{Stealth[length=2mm]}, thick, dashed, draw=pufhalt},
 ]
 
 % ---------- configuration inputs (dashed) ----------
-\node[cfgbox] (src) {\textbf{Source workbooks}\\ D1--D5, not redistributed\\ + SHA-256 manifest};
+\node[cfgbox] (src) {\textbf{Source workbooks}\\ D1--D5 + SHA-256 manifest};
 \node[cfgbox, right=12mm of src] (cfg) {\textbf{Configuration}\\ variable roles, QID\\ scenarios, thresholds};
 \node[cfgbox, right=12mm of cfg] (rules) {\textbf{ASP rule base}\\ \texttt{privacy\_rules.lp}\\ 39 rules};
 
 % ---------- processing components (solid, colored) ----------
-\node[procbox, below=10mm of src] (prof) {\textbf{Profiler}\\[2pt] verify hashes, normalize,\\ drop all-empty rows,\\ build equivalence classes,\\ compute $U_Q$, $G_{k,Q}$, $H_Q$};
-\node[procbox, below=10mm of cfg] (eng) {\textbf{Policy Engine}\\[2pt] basis-point ASP facts,\\ Clingo grounding and solving,\\ integrity constraints,\\ exactly one stable model};
-\node[procbox, below=10mm of rules] (rep) {\textbf{Report Generator}\\[2pt] merge profiles with\\ decisions, render the\\ narrative audit report};
+\node[procbox, below=10mm of src] (prof) {\textbf{Profiler}\\[2pt] verify hashes, normalize,\\ drop all-empty rows,\\ equivalence classes\\ and risk metrics};
+\node[procbox, below=10mm of cfg] (eng) {\textbf{Policy Engine}\\[2pt] ground and solve (Clingo),\\ integrity constraints,\\ exactly one stable model};
+\node[procbox, below=10mm of rules] (rep) {\textbf{Report Generator}\\[2pt] merge profiles with\\ decisions, render the\\ Markdown report};
 
 % ---------- generated outputs (gray) ----------
-\node[outbox, below=10mm of prof] (o1) {dataset profiles (CSV/JSON),\\ column inventory, scenarios,\\ \LaTeX{} macros};
-\node[outbox, below=10mm of eng] (o2) {decision, flags, actions\\ with rule trace};
+\node[outbox, below=10mm of prof] (o1) {profiles, column inventory,\\ scenarios (CSV);\\ SVG chart; \LaTeX{} macros};
+\node[outbox, below=10mm of eng] (o2) {decisions, flags, actions\\ (CSV and JSON trace)};
 \node[outbox, below=10mm of rep] (o3) {Markdown audit report};
 
 % ---------- fail-closed ----------
@@ -50,7 +54,7 @@
 \node[humanbox, below=9mm of o3] (human) {\textbf{Documented human review}\\[2pt] decision support, not a\\ release authorization};
 
 % ---------- flows ----------
-% source workbooks feed the Profiler; configuration feeds Profiler and Engine;
+% workbooks feed the Profiler; configuration feeds Profiler and Engine;
 % the rule base is loaded by the Policy Engine.
 \draw[flow] (src) -- (prof);
 \draw[flow] (cfg) -- (eng);
